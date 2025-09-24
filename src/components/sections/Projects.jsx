@@ -8,7 +8,7 @@ export default function Projects() {
       date: "Feb 2025 - Apr 2025",
       description: "ML-based system to suggest products based on skin type and ingredient analysis.",
       tech: ["Machine Learning", "Python", "Data Analysis"],
-      status: "In Progress"
+      status: "Completed"
     },
     {
       title: "Pedestrian Detection",
@@ -87,11 +87,7 @@ export default function Projects() {
                   <span>{project.date}</span>
                 </div>
               </div>
-              <span className={`px-3 py-1 rounded-full text-xs font-medium w-fit ${
-                project.status === 'Completed' 
-                  ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200' 
-                  : 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200'
-              }`}>
+              <span className="px-3 py-1 rounded-full text-xs font-medium w-fit bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200">
                 {project.status}
               </span>
             </div>

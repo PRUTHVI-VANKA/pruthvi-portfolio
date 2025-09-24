@@ -114,10 +114,9 @@ export default function Sidebar({ activeSection, setActiveSection }) {
         >
           <button
             onClick={toggleTheme}
-            className="w-full flex items-center justify-center space-x-2 px-4 py-3 rounded-lg bg-gradient-to-r from-yellow-400 to-purple-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105 text-base"
+            className="w-full flex items-center justify-center px-4 py-3 rounded-lg bg-gradient-to-r from-yellow-400 to-purple-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105 text-base"
           >
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-            <span>{theme === 'light' ? 'Night Mode' : 'Day Mode'}</span>
           </button>
         </motion.div>
 
