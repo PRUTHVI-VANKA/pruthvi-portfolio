@@ -135,14 +135,29 @@ export default function Experience() {
         transition={{ delay: 0.9 }}
         className="bg-gradient-to-r from-orange-500/20 to-red-500/20 backdrop-blur-sm rounded-2xl p-4 md:p-6 border border-orange-300/30 dark:border-orange-700/50"
       >
-        <h3 className="text-lg md:text-xl font-semibold text-gray-800 dark:text-white mb-3">
-          Professional Journey
+        <h3 className="text-lg md:text-xl font-semibold text-gray-800 dark:text-white mb-4">
+          Certifications
         </h3>
-        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-          Through diverse internship experiences across port authority, edtech, and technology companies, 
-          I've gained hands-on expertise in AI/ML implementation, data analytics, and practical project development. 
-          Each role has strengthened my technical skills while building real-world problem-solving capabilities.
-        </p>
+        <div className="space-y-3">
+          {[
+            "The Complete SQL Bootcamp 2022: Go from Zero to Hero",
+            "The Beginner's Guide To Artificial Intelligence (Unity 2022)",
+            "Introduction to Data Analytics — Coursera",
+            "Python 101 for Data Science — IBM",
+            "Data Visualization with Power BI"
+          ].map((cert, index) => (
+            <motion.div
+              key={cert}
+              initial={{ x: -20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 1.0 + index * 0.1 }}
+              className="flex items-start"
+            >
+              <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+              <span className="text-sm md:text-base text-gray-700 dark:text-gray-300">{cert}</span>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
     </motion.div>
   );

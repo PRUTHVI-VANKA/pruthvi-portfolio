@@ -25,13 +25,13 @@ export default function Sidebar({ activeSection, setActiveSection }) {
 
   return (
     <>
-      {/* Mobile Header */}
-      <div className="mobile-header lg:hidden">
+      {/* Mobile Header - Now visible on all screen sizes */}
+      <div className="mobile-header">
         <div>
           <h1 className="text-xl font-bold text-gray-800 dark:text-white">
             Pruthvi Vanka
           </h1>
-          <p className="text-sm text-gray-600 dark:text-gray-300">
+          <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
             AI/ML Engineer
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function Sidebar({ activeSection, setActiveSection }) {
 
       {/* Overlay */}
       <div 
-        className={`overlay lg:hidden ${isMobileMenuOpen ? 'open' : ''}`}
+        className={`overlay ${isMobileMenuOpen ? 'open' : ''}`}
         onClick={() => setIsMobileMenuOpen(false)}
       />
 
@@ -54,7 +54,7 @@ export default function Sidebar({ activeSection, setActiveSection }) {
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className={`sidebar ${isMobileMenuOpen ? 'open' : ''} bg-white/10 dark:bg-black/10 backdrop-blur-lg border-r border-white/20 dark:border-gray-800/50 p-6 flex flex-col`}
+        className={`sidebar ${isMobileMenuOpen ? 'open' : ''} bg-white/10 dark:bg-black/10 backdrop-blur-lg border-r border-white/20 dark:border-gray-800/50 p-6 flex flex-col z-50`}
       >
         {/* Header - Hidden on mobile */}
         <div className="mb-12 hidden lg:block">
