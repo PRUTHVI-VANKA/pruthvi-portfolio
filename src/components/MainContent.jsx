@@ -4,7 +4,7 @@ import Experience from './sections/Experience.jsx';
 import Projects from './sections/Projects.jsx';
 import Contact from './sections/Contact.jsx';
 
-export default function MainContent({ activeSection }) {
+export default function MainContent({ activeSection, isSidebarOpen }) {
   const renderContent = () => {
     switch (activeSection) {
       case 'about':
@@ -21,7 +21,7 @@ export default function MainContent({ activeSection }) {
   };
 
   return (
-    <div className="main-content">
+    <div className={`main-content ${isSidebarOpen ? 'sidebar-open' : ''}`}>
       <div className="max-w-4xl mx-auto w-full">
         <AnimatePresence mode="wait">
           <motion.div

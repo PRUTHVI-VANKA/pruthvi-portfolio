@@ -8,6 +8,7 @@ import { useTheme } from './components/ThemeProvider.jsx';
 
 function AppContent() {
   const [activeSection, setActiveSection] = useState('about');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { theme } = useTheme();
 
   return (
@@ -20,8 +21,13 @@ function AppContent() {
         <Sidebar 
           activeSection={activeSection} 
           setActiveSection={setActiveSection} 
+          isSidebarOpen={isSidebarOpen}
+          setIsSidebarOpen={setIsSidebarOpen}
         />
-        <MainContent activeSection={activeSection} />
+        <MainContent 
+          activeSection={activeSection} 
+          isSidebarOpen={isSidebarOpen}
+        />
       </div>
     </div>
   );
