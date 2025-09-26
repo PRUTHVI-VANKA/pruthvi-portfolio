@@ -141,7 +141,7 @@ export default function Contact() {
           
           <motion.a
             href="/resume/Pruthvi_Vanka_Resume.pdf"
-            download="Pruthvi_Vanka_Resume.pdf"
+            download="Pruthvi_Resume.pdf"
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500 to-teal-600 text-white px-6 md:px-8 py-2 md:py-3 rounded-full text-sm md:text-base font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto justify-center"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
